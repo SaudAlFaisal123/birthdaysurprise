@@ -1,0 +1,189 @@
+/* General Styles */
+body {
+    background: linear-gradient(to bottom right, #fbc2eb, #a6c1ee);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Instruction Text*/
+.instruction-text {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff3366;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Cake Container */
+.cake {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Candles */
+.candles {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    top: -50px;
+}
+
+.candle {
+    width: 10px;
+    height: 40px;
+    background: orange;
+    position: relative;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: opacity 0.3s ease;
+}
+
+/* Flame */
+.candle::before {
+    content: "";
+    width: 12px;
+    height: 18px;
+    background: radial-gradient(circle, yellow, orange);
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+/* Candle Base */
+.candle::after {
+    content: "";
+    width: 15px;
+    height: 5px;
+    background: #8b5a2b;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+}
+
+/* Extinguished Effect */
+.candle.extinguished {
+    opacity: 0.3;
+}
+
+.candle.extinguished::before {
+    display: none;
+}
+
+/* Icing */
+.icing {
+    width: 130px;
+    height: 20px;
+    background: pink;
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    top: -10px;
+    box-shadow: inset 0 -5px rgba(255, 255, 255, 0.6);
+}
+
+/* Cake Body */
+.cake-body {
+    width: 170px;
+    height: 60px;
+    background: #ff6680;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Middle Cake Layer */
+.cake-layer {
+    width: 160px;
+    height: 15px;
+    background: #d63384;
+    border-radius: 10px;
+    margin-top: 3px;
+}
+
+/* Bottom Cake Layer */
+.cake-bottom {
+    width: 170px;
+    height: 25px;
+    background: #b1226b;
+    border-radius: 10px;
+    margin-top: 3px;
+}
+
+/* Message Box */
+.message-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.message-box h2 {
+    color: #ff6680;
+}
+
+.message-box button {
+    background: #ff6680;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.message-box button:hover {
+    background: #ff3d6e;
+}
+
+/* Navigation Button */
+.button-container {
+    position: absolute;
+    top: 69%; /* Adjusted to place it below the cake */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center; /* Center button horizontally */
+    width: auto;
+}
+
+.button-container button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    background: #ff6699;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect */
+.button-container button:hover {
+    background: #ff3366;
+    transform: scale(1.1);
+}

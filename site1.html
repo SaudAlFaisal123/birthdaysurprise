@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+
+         <!-- Background Music -->
+    <audio id="background-music" loop>
+        <source src="audio/aud.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+        <!-- Instruction Text -->
+        <div class="instruction-text">
+            Click the candles to blow them for a surprise
+        </div>
+
+        <!-- Cake -->
+        <div class="cake">
+            <!-- Candles -->
+            <div class="candles">
+                <div class="candle" onclick="extinguishCandle(this)"></div>
+                <div class="candle" onclick="extinguishCandle(this)"></div>
+                <div class="candle" onclick="extinguishCandle(this)"></div>
+                <div class="candle" onclick="extinguishCandle(this)"></div>
+                <div class="candle" onclick="extinguishCandle(this)"></div>
+            </div>
+
+            <!-- Icing -->
+            <div class="icing"></div>
+
+            <!-- Cake Layers -->
+            <div class="cake-body"></div>
+            <div class="cake-layer"></div>
+            <div class="cake-bottom"></div>
+        </div>
+
+        <!-- Message Box -->
+        <div class="message-box" id="messageBox">
+            <h2>✨ Happy Birthday! ✨</h2>
+            <p>To the most beautiful soul in my world. Today isn’t just your 
+                birthday—it’s the celebration of someone who changed my life forever. 
+                You’re not just my best friend, you’re my peace, my happiness, 
+                and the heartbeat I never knew I needed. I can’t describe how lucky I feel to know you, 
+                to laugh with you, and to care for you the way I do. You matter to me more than anything. 
+                This day is yours, and so is every smile you bring into my life. You’re magic. You’re mine. You’re everything. 💖
+            </p>
+            <button onclick="hideMessage()">Thank you! ❤️</button>
+        </div>
+
+        <!-- Navigation Button (Only One) -->
+        <div class="button-container">
+            <button id="next-surprise" onclick="location.href='site2.html'">Memory Lane</button>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.0.1"></script>
+    <script src="script1.js"></script>
+    <script src="confetti.js"></script>
+</body>
+</html>

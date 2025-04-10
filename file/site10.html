@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="style1.css">
+    
+    <!-- Lottie Player Script -->
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+</head>
+<body>
+    <audio id="background-music" loop>
+        <source src="audio/aud.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        <!-- Centered Card -->
+        <div class="card">
+            <h1>Happy Birthday, My Bestie! 🎉🎂</h1>
+            <button id="start-button" onclick="location.href='site2.html'"> Let's Go! ✨</button>
+        </div>
+
+        <!-- Lottie Animation (Fixed Below) -->
+        <div class="lottie-container">
+            <dotlottie-player 
+                src="https://lottie.host/a9e2c085-9ab6-46f6-9c7b-497be021dfef/Ub7R4uwBly.lottie"
+                background="transparent" 
+                speed="1" 
+                loop 
+                autoplay>
+            </dotlottie-player>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.0.1"></script>
+    <script src="script1.js"></script>
+    <script src="confetti.js"></script>
+</body>
+</html>
